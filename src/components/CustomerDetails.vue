@@ -6,7 +6,7 @@
       </h2>
     </v-card-title>
     <v-card-text>
-      <p>{{ customer.street }}, {{ customer.streetTwo }}</p>
+      <p>{{ customer.street }}, {{ customer.street_two }}</p>
       <span>#{{ customer.business_id }}</span>
     </v-card-text>
     <v-card-actions>
