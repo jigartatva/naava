@@ -192,8 +192,8 @@ export default {
       groups: [],
     },
     companyTypes: [
-      { label: 'Is Private Household?', value: 'private' },
-      { label: 'Is Company?', value: 'company' },
+      { label: 'Private Household', value: 'private' },
+      { label: 'Company', value: 'company' },
     ],
     countries: ['Ind', 'Fin'],
     states: ['Guj', 'Maha'],
