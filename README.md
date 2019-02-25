@@ -15,22 +15,22 @@ php artisan migrate
 ```
 
 ## Project setup
-- On root directory run following commands
+- On project root directory run following commands
 
 ```
 - npm install
 - npm run serve
 ```
-- set api path according to the local settings of laravel setup in `src\environments\environment.json`
+- Set api path according to the local settings of laravel setup in `src\environments\environment.json`
 
 ### Compiles and minifies for production
 ```
 npm run build
 ```
-- Run following commands on root directory after build
+- Run following commands on project root directory after build
 ```
 -  mkdir www
 -  cp -r dist/* ./www
 ```
 
-- open browser and go to [http://localhost/<project_directory>/www](http://localhost/<project_directory>/www) for working build
+- Open browser and go to [http://localhost/<project_directory>/www](http://localhost/<project_directory>/www) for working build
