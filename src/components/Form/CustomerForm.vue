@@ -53,11 +53,11 @@
               xs12
               md3
             >
-              <v-autocomplete
+              <v-select
                 v-model="customer.country"
                 :items="countries"
                 :rules="countryRule"
-                color="blue"
+                color="primary"
                 item-text="name"
                 label="Select Country*"
               />
@@ -66,11 +66,11 @@
               xs12
               md3
             >
-              <v-autocomplete
+              <v-select
                 v-model="customer.state"
                 :items="states"
                 :rules="stateRule"
-                color="blue"
+                color="primary"
                 item-text="name"
                 label="Select State*"
               />
@@ -79,11 +79,11 @@
               xs12
               md3
             >
-              <v-autocomplete
+              <v-select
                 v-model="customer.city"
                 :items="cities"
                 :rules="cityRule"
-                color="blue"
+                color="primary"
                 item-text="name"
                 label="Select City*"
               />

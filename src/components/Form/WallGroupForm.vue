@@ -57,11 +57,11 @@
               xs12
               md3
             >
-              <v-autocomplete
+              <v-select
                 v-model="wallgroup.country"
                 :rules="countryRule"
                 :items="countries"
-                color="blue"
+                color="primary"
                 item-text="name"
                 label="Select Country*"
               />
@@ -70,11 +70,11 @@
               xs12
               md3
             >
-              <v-autocomplete
+              <v-select
                 v-model="wallgroup.state"
                 :items="states"
                 :rules="stateRule"
-                color="blue"
+                color="primary"
                 item-text="name"
                 label="Select State*"
               />
@@ -83,11 +83,11 @@
               xs12
               md3
             >
-              <v-autocomplete
+              <v-select
                 v-model="wallgroup.city"
                 :rules="cityRule"
                 :items="cities"
-                color="blue"
+                color="primary"
                 item-text="name"
                 label="Select City*"
               />

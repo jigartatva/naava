@@ -1,15 +1,15 @@
 <template>
   <v-card class="grey lighten-3">
     <v-card-title>
+      <span class="primary--text">{{ maintainer.title }}&nbsp;</span>
       <h2 class="primary--text">
         {{ maintainer.name }}
       </h2>
-      <span class="primary--text">{{ maintainer.title }}</span>
     </v-card-title>
     <v-card-text>
-      <span>Phone: {{ maintainer.phone }}</span>
-      <span>Mobile: {{ maintainer.mobilePhone }}</span>
-      <span>Email: {{ maintainer.email }}</span>
+      <span class="new-line-span">Phone: {{ maintainer.phone }}</span>
+      <span class="new-line-span">Mobile: {{ maintainer.mobile_phone }}</span>
+      <span class="new-line-span">Email: {{ maintainer.email }}</span>
     </v-card-text>
     <v-card-actions>
       <v-spacer />
@@ -49,7 +49,10 @@ export default {
   data: () => ({
     confirmationDailog: false,
   }),
-
+	update(){
+		console.log(this.maintainer);
+		
+	},
   methods: {
     confirmDelete() {
       this.confirmationDailog = true;
@@ -82,4 +85,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

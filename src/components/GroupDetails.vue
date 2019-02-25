@@ -6,7 +6,7 @@
       </h2>
     </v-card-title>
     <v-card-text>
-      <p>{{ group.street }}, {{ group.streetTwo }}</p>
+      <p>{{ group.street }}, {{ group.street_two }}</p>
     </v-card-text>
     <v-card-actions>
       <v-spacer />
