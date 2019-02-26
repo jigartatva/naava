@@ -473,7 +473,7 @@ export default {
     createCustomer() {
       if (this.$refs.customerFormRef.$refs.customerDetailsForm.validate()) {
         axios
-          .post(`${env.API_URL}customers/`, {
+          .post(`${env.API_URL}customers`, {
             customer: this.$refs.customerFormRef.customer,
           })
           .then(() => {
