@@ -473,7 +473,7 @@ export default {
     createCustomer() {
       if (this.$refs.customerFormRef.$refs.customerDetailsForm.validate()) {
         axios
-          .post('https://www.anasource.com/team4/naava/public/api/customers', {
+          .post(`${env.API_URL}customers/`, {
             customer: this.$refs.customerFormRef.customer,
           })
           .then(() => {
