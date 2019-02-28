@@ -30,9 +30,12 @@
 <script>
 export default {
   name: 'ConfirmDailog',
-  props: ['message', 'dailogModel'],
+  props: {
+    message: { type: String, default: 'Are you sure you want to delete this item?' },
+    dailogModel: { type: Boolean },
+  },
   mounted() {
-    if (this.message === '' || typeof (this.message) === 'undefined') {
+    if (this.message === '' || typeof this.message === 'undefined') {
       this.message = 'Are you sure you want to delete this item?';
     }
   },

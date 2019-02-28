@@ -5,7 +5,7 @@
       class="px-4"
     >
       <h2
-        v-if="maintainer.index"
+        v-if="maintainer.index || maintainer.index == 0"
         class="heading mb-0 primary--text"
       >
         Edit Maintenance Contacts

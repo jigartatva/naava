@@ -49,10 +49,9 @@ export default {
   data: () => ({
     confirmationDailog: false,
   }),
-	update(){
-		console.log(this.maintainer);
-		
-	},
+  update() {
+
+  },
   methods: {
     confirmDelete() {
       this.confirmationDailog = true;
@@ -66,11 +65,7 @@ export default {
     deleteMaintainer() {
       if ('id' in this.maintainer) {
         axios
-          .delete(
-            `${env.API_URL}maintainers/${
-              this.maintainer.id
-            }`,
-          )
+          .delete(`${env.API_URL}maintainers/${this.maintainer.id}`)
           .then(() => {
             this.confirmationDailog = false;
             this.$emit('maintainerDeleteEvent', this.maintainer.index);
@@ -83,7 +78,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-
-</style>

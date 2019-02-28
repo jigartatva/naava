@@ -24,7 +24,11 @@ class CustomerController extends ApiController
             $customers = Customer::with(['groups', 'groups.maintainers'])->where('name', "like", "%" . $searchCustomer . "%");
         }
         $customers = $customers->paginate(2);
-
+        if (!$customers->count()) {
+            if (! is_null($customers->previousPageUrl())) {
+                return redirect()->to($customers->previousPageUrl());
+            }
+        }
         if (count($customers)) {
             $this->apiData   = $customers;
             $this->apiCode   = 200;
@@ -73,7 +77,6 @@ class CustomerController extends ApiController
             // dd($request->customer['wallgroups']);
             // Second we need to insert groups
             if (!is_null($request->customer['groups'])) {
-
                 foreach ($request->customer['groups'] as $key => $group) {
                     // dd($group);
                     $group_model = new WallGroup($group);
@@ -121,7 +124,6 @@ class CustomerController extends ApiController
      */
     public function edit($id)
     {
-
         $customer = Customer::with(['groups', 'groups.maintainers'])->findOrFail($id);
         if ($customer) {
             $this->apiData   = $customer;
@@ -153,13 +155,10 @@ class CustomerController extends ApiController
             $this->apiStatus = false;
             $this->apiCode   = 401;
         } else {
-
             if (!is_null($customer_data['groups'])) {
-
                 $customer = Customer::find($id);
 
                 foreach ($customer_data['groups'] as $key => $group) {
-
                     if (isset($group['maintainers'])) {
                         $maintainers_data = $group['maintainers'];
                         unset($group['maintainers']);

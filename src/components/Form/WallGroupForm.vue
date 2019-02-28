@@ -226,7 +226,7 @@ export default {
             },
           )
           .then((response) => {
-            this.$emit('update  WallgroupDataEvent', response.data.data);
+            this.$emit('updateWallgroupDataEvent', response.data.data);
 
             this.clickFormCancel();
             // this.initWallGroup();

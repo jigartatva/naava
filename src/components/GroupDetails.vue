@@ -8,6 +8,15 @@
     <v-card-text>
       <p>{{ group.street }}, {{ group.street_two }}</p>
     </v-card-text>
+    <v-card-text v-show="group.maintainers.length > 0">
+      <span class="new-line-span"><strong>Maintainers : </strong></span>
+      <span
+        v-for="(maintainer,index) in group.maintainers"
+        :key="index"
+        class="new-line-span"
+      >
+        {{ `${maintainer.title} ${maintainer.name}` }}</span>
+    </v-card-text>
     <v-card-actions>
       <v-spacer />
       <v-btn
