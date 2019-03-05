@@ -4,9 +4,9 @@
 ```
 - cd <project directory>/api/local
 - composer install
+- rename .env.example file to .env
 - php artisan key:generate
 - create database in your localhost
-- rename .env.example file to .env
 - set database settings in .env file and save it.
 - run following command
 ```
